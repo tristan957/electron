@@ -19,6 +19,11 @@ declare namespace Electron {
     setAppPath(path: string | null): void;
   }
 
+  interface WebContents {
+    _getURL(): string;
+    getOwnerBrowserWindow(): Electron.BrowserWindow;
+  }
+
   interface SerializedError {
     message: string;
     stack?: string,
